@@ -1,7 +1,5 @@
 #pragma once
 
-#include "difusion/pcl_types.h"
-
 #include "measurement.h"
 
 namespace difusion {
