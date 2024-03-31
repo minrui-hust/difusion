@@ -7,10 +7,13 @@
 namespace difusion {
 
 struct Module {
-  virtual void configure(const YAML::Node &cfg) = 0;
+  Module(const YAML::Node &cfg) : config_(cfg) {}
 
   // base class should set destructor virtual
   virtual ~Module() = default;
+
+protected:
+  YAML::Node config_;
 };
 
 } // namespace difusion

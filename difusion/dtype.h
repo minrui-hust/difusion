@@ -19,9 +19,9 @@ using scalar_t = double;
 
 using Time = int64_t;
 
-template <size_t _dim> using Vector = Eigen::Vector<scalar_t, _dim>;
+template <size_t _dim> using Vector = Eigen::Matrix<scalar_t, _dim, 1>;
 
-template <size_t _dim> using Vectord = Eigen::Vector<double, _dim>;
+template <size_t _dim> using Vectord = Eigen::Matrix<double, _dim, 1>;
 
 using Vector2 = Vector<2>;
 using Vector3 = Vector<3>;

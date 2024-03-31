@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17.0)
+cmake_minimum_required(VERSION 3.15.0)
 project(difusion)
 
 if(NOT CMAKE_BUILD_TYPE)
@@ -17,6 +17,11 @@ include_directories(${PROJECT_SOURCE_DIR})
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 # message("EIGEN3_INCLUDE_DIR: ${EIGEN3_INCLUDE_DIR}")
+
+find_package(PCL REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 
 find_package(manif REQUIRED)
 include_directories(${manif_INCLUDE_DIRS})
